@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+{%  block title %}
+    create page
+{%  endblock %}
+{% block body%}
+    <form action='newPage' method="POST">
+    {%  csrf_token %}
+{{ form.title.label_tag }}  {{ form.title }}
+        <br>
+        {{ form.markcontent.label_tag}}
+        <br>
+        {{ form.markcontent }}
+        <br>
+
+       <!-- <label for="title">title :  </label>
+        <input type="text" name="title" id="id_title"><br>
+        -->
+    <input type="submit" value="create" style="margin-left: 30%">
+    </form>
+{% endblock %}

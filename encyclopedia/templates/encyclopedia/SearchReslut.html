@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search suggestions</title>
+</head>
+<body>
+<P>your suggestions : </P>
+<ol>
+{% for i in suggestions %}
+    <li> <a href="wiki/{{ i|lower }}"> {{ i }} </a> </li>
+{% endfor %}
+</ol>
+
+
+</body>
+</html>
